@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF;
+    font-family: "Martian Mono", Verdana, Tahoma, sans-serif;
+    font-weight: 500;
+    line-height: 2.5;
+}
+
+.page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+.profile,
+.welcome,
+.about,
+.table,
+.form,
+.grid-section {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.logo {
+    width: 200px;
+}
+
+.profile-picture {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+footer {
+    font-size: 18px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: orangered;
+    font-size: 20px;
+    text-align: center;
+}
+
+#submit:hover {
+    background-color: #BDD;
+    border: 1px solid orangered;
+}
+
+#submit {
+    background-color: #CFF;
+    border-radius: 15%;
+    border: none;
+    font-size: 20px;
+    height: 60px;
+    text-align: center;
+    width: 120px;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+    ;
+}
+
+.navigation-list {
+    list-style-type: none;
+}
+
+.navigation-list__item,
+.linkto {
+    color: #090CCF;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.linkto {
+    font-size: 20px;
+}
+
+.linkto:focus {
+    color: #7010AB;
+}
+
+.navigation-list__item:hover,
+.linkto:hover {
+    color: #AB109F;
+}
+
+.svg:hover {
+    filter: invert(100%)
+}
+
+.svg {
+    padding: 15px;
+}
+
+table,
+th,
+td {
+    border: 1px double;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#grid-container .grid-item {
+    background-color: rgb(249, 241, 227);
+    color: rgb(92, 38, 0);
+    text-align: center;
+    min-height: 100px;
+    margin: 10px;
+}
+
+#grid-container .grid-item:nth-child(2) {
+    grid-column-start: calc(2);
+    grid-column-end: 4;
+}
+
+#grid-container .grid-item:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
