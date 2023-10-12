@@ -13,14 +13,15 @@ body {
     display: flex;
     width: 100%;
     padding: 20px;
+    margin: 0 auto;
+    border-bottom: 1px solid #000;
 }
 
 .profile,
 .welcome,
 .about,
 .table,
-.form,
-.grid-section {
+.form {
     max-width: 700px;
     margin: 0 auto;
     text-align: left;
@@ -42,12 +43,6 @@ footer {
     text-align: center;
     max-width: 700px;
     margin: 0 auto;
-}
-
-h1 {
-    color: orangered;
-    font-size: 20px;
-    text-align: center;
 }
 
 #submit:hover {
@@ -114,27 +109,129 @@ td {
     padding: 10px;
 }
 
-#grid-container {
+h1 {
+    color: orangered;
+    font-size: 30px;
+    text-align: center;
+}
+
+.grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 20px;
+    background-color: black;
+    color: azure;
+    padding: 10px;
 }
 
-#grid-container .grid-item {
-    background-color: rgb(249, 241, 227);
-    color: rgb(92, 38, 0);
+.grid-item {
+    background-color: darkred;
+    border: 2px solid rgb(251, 153, 153);
+    padding: 30px;
+    font-size: 28px;
     text-align: center;
-    min-height: 100px;
-    margin: 10px;
 }
 
-#grid-container .grid-item:nth-child(2) {
-    grid-column-start: calc(2);
-    grid-column-end: 4;
+@media all and (max-width: 700px) {
+    h1 {
+        font-size: 20px;
+    }
+    
+   .grid-container {
+        grid-template-columns: 1fr 1fr;
+        padding: 5px;
+    }
+
+    .grid-item {
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+    }
 }
 
-#grid-container .grid-item:nth-child(1) {
-    grid-row-start: 1;
-    grid-row-end: 3;
+button,
+.button {
+    background-color: orangered; /* Green */
+    border: 1px solid azure;
+    border-radius: 20%;
+    color: rgb(230, 248, 248);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 16px;
+    margin-bottom: 25px;
+    transition-duration: 100ms;
+    transition-property: opacity;
 }
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+/* 
+svg sun color change from yellow to red and back
+ fill is a specific CSS property that only applies to SVGs.
+*/
+@keyframes color-change {
+    0% {
+        fill: #edc655;
+      }
+      50% {
+        fill: #fcffad;
+      }
+      100% {
+        fill: #f76414;
+      }
+  }
+
+  /* animation: 4s color-change infinite alternate linear; 
+  will do the same thing as below.*/
+  .sun {
+    animation-duration: 4000ms;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+
+  /*
+    moving the cloud in svg
+  */
+  @keyframes cloud-move {
+    from {
+      transform: translate(0, 50px);
+    }
+    to {
+      transform: translate(200px, 50px);
+    }
+  }
+/* 
+  One line code instead of five. 
+*/
+  .cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+  }
+
+  /*
+    Moving the other cloud.
+  */
+  @keyframes cloud-move-reverse {
+    from {
+      transform: translate(446px, 48px);
+    }
+    to {
+      transform: translate(100px, 48px);
+    }
+  }
+
+  .cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+  }
