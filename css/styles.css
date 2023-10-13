@@ -146,8 +146,8 @@ h1 {
     h1 {
         font-size: 20px;
     }
-    
-   .grid-container {
+
+    .grid-container {
         grid-template-columns: 1fr 1fr;
         padding: 5px;
     }
@@ -161,7 +161,8 @@ h1 {
 
 button,
 .button {
-    background-color: orangered; /* Green */
+    background-color: orangered;
+    /* Green */
     border: 1px solid azure;
     border-radius: 20%;
     color: rgb(230, 248, 248);
@@ -180,26 +181,26 @@ button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
-  cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
 }
 
 @keyframes color-change {
     0% {
-            fill: #ccf;
-        }
+        fill: #ccf;
+    }
 
-        50% {
-            fill: #33f;
-        }
+    50% {
+        fill: #33f;
+    }
 
-        100% {
-            fill: #f76414;
-        }
+    100% {
+        fill: #f76414;
+    }
 }
 
 path {
-   animation: 4s color-change infinite alternate linear;
+    animation: 4s color-change infinite alternate linear;
 }
