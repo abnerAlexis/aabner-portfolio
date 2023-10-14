@@ -1,30 +1,37 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
+:root {
+    --orangered: orangered;
+    --darkred: darkred;
+    --submitbtn-background-color: rgb(10, 174, 174);
+    --black: #000;
+    --white: #FFF;
+    --nav-text-blue: #090CCF;
+    --contact-link-text-color: #7010AB;
+    --hover-nav-contactli-color: #AB109F;
+    --azure: azure;
+    --salmon: salmon;
+    --button-text-color: rgb(230, 248, 248);
+    --keyframe-col1: #ccf;
+    --keyframe-col2: #33f;
+    --keyframe-col3: #f76414;
+}
 
 * {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #fff;
+    background-color: var(--white);
     font-family: "Martian Mono", Verdana, Tahoma, sans-serif;
     font-weight: 500;
     line-height: 2.5;
 }
 
 .page-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     padding: 20px;
     margin: 0 auto;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--black);
 }
 
 .profile,
@@ -56,7 +63,7 @@ footer {
 }
 
 #submit {
-    background-color: rgb(10, 174, 174);
+    background-color: var(--submitbtn-background-color);
     border-radius: 15%;
     border: none;
     font-size: 20px;
@@ -68,11 +75,7 @@ footer {
     font-family: inherit;
     font-size: 16px;
     margin-bottom: 25px;
-    -webkit-transition-duration: 1000ms;
-    -o-transition-duration: 1000ms;
     transition-duration: 1000ms;
-    -webkit-transition-property: opacity;
-    -o-transition-property: opacity;
     transition-property: opacity;
 }
 
@@ -87,6 +90,7 @@ submit:focus,
 li {
     display: inline-block;
     margin-right: 20px;
+    ;
 }
 
 .navigation-list {
@@ -95,7 +99,7 @@ li {
 
 .navigation-list__item,
 .linkto {
-    color: #090ccf;
+    color: var(--nav-text-blue);
     font-size: 20px;
     text-decoration: none;
 }
@@ -105,17 +109,16 @@ li {
 }
 
 .linkto:focus {
-    color: #7010ab;
+    color: var(--contact-link-text-color);
 }
 
 .navigation-list__item:hover,
 .linkto:hover {
-    color: #ab109f;
+    color: var(--hover-nav-contactli-color);
 }
 
 .svg:hover {
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
+    filter: invert(100%)
 }
 
 .svg {
@@ -134,25 +137,24 @@ td {
 }
 
 h1 {
-    color: orangered;
+    color: var(--orangered);
     font-size: 30px;
     text-align: center;
 }
 
 .grid-container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
-    background-color: black;
-    color: azure;
+    background-color: var(--black);
+    ;
+    color: var(--azure);
     padding: 10px;
 }
 
 .grid-item {
-    background-color: darkred;
-    border: 2px solid rgb(251, 153, 153);
+    background-color: var(--darkred);
+    border: 2px solid var(--salmon);
     padding: 30px;
     font-size: 28px;
     text-align: center;
@@ -164,7 +166,6 @@ h1 {
     }
 
     .grid-container {
-        -ms-grid-columns: 1fr 20px 1fr;
         grid-template-columns: 1fr 1fr;
         padding: 5px;
     }
@@ -178,11 +179,10 @@ h1 {
 
 button,
 .button {
-    background-color: orangered;
-    /* Green */
-    border: 1px solid azure;
+    background-color: var(--orangered);
+    border: 1px solid var(--azure);
     border-radius: 20%;
-    color: rgb(230, 248, 248);
+    color: var(--button-text-color);
     padding: 10px;
     text-align: center;
     text-decoration: none;
@@ -190,11 +190,7 @@ button,
     font-family: inherit;
     font-size: 16px;
     margin-bottom: 25px;
-    -webkit-transition-duration: 100ms;
-    -o-transition-duration: 100ms;
     transition-duration: 100ms;
-    -webkit-transition-property: opacity;
-    -o-transition-property: opacity;
     transition-property: opacity;
 }
 
@@ -208,35 +204,20 @@ button:focus,
     opacity: 0.8;
 }
 
-@-webkit-keyframes color-change {
-    0% {
-        fill: #ccf;
-    }
-
-    50% {
-        fill: #33f;
-    }
-
-    100% {
-        fill: #f76414;
-    }
-}
-
 @keyframes color-change {
     0% {
-        fill: #ccf;
+        fill: var(--keyframe-col1);
     }
 
     50% {
-        fill: #33f;
+        fill: var(--keyframe-col2);
     }
 
     100% {
-        fill: #f76414;
+        fill: var(--keyframe-col3);
     }
-}
 
-path {
-    -webkit-animation: 4s color-change infinite alternate linear;
-    animation: 4s color-change infinite alternate linear;
+    path {
+        animation: 4s color-change infinite alternate linear;
+    }
 }
