@@ -204,3 +204,11 @@ button:focus,
 path {
     animation: 4s color-change infinite alternate linear;
 }
+
+form {
+    width: 450px;
+    max-width: 400px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 0.25em;
+}
