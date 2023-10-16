@@ -248,3 +248,9 @@ form {
     margin: 0 auto;
     padding-bottom: 0.25em;
 }
+
+.resume-link {
+    margin-top: 55px;
+    margin-bottom: 0;
+    text-align: center;
+}
