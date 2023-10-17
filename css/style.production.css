@@ -69,7 +69,7 @@ footer {
     display: inline-block;
     font-family: inherit;
     font-size: 16px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     -webkit-transition-duration: 1000ms;
     -o-transition-duration: 1000ms;
     transition-duration: 1000ms;
@@ -240,15 +240,53 @@ button:focus,
 
 path {
     -webkit-animation: 4s color-change infinite alternate linear;
-    animation: 4s color-change infinite alternate linear;
 }
 
-form {
-    width: 450px;
-    max-width: 400px;
-    min-width: 300px;
+fieldset {
     margin: 0 auto;
-    padding-bottom: 0.25em;
+    padding: 10px 20px;
+    border: 1px solid orangered;
+    border-radius: 5%;
+    text-align: center;
+    max-width: 350px;
+}
+
+legend {
+    font-size: 20px;
+    padding: 25px;
+    color: #999;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+}
+
+label:first-of-type {
+    margin-top: -25px;
+}
+
+input {
+    padding: 5px;
+    border-radius: 6%;
+}
+
+input[type="text"], input[type="email"] {
+    width: 300px;
+    border: 1px solid #999;
+}
+
+textarea {
+    min-height: 100px;
+    min-width: 300px;
+    padding: 5x;
+    border: 1px solid #999;
+}
+
+.contact {
+    margin-top: -10px;
+    text-align: center;
 }
 
 .resume-link {
