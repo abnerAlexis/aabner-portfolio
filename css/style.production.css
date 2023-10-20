@@ -266,7 +266,7 @@ legend {
 }
 
 label {
-    display: block;
+    display: inline-flex;
     margin-top: 12px;
 }
 
@@ -275,7 +275,7 @@ label:first-of-type {
 }
 
 input {
-    padding: 5px;
+    padding: 8px;
     border-radius: 6%;
 }
 
@@ -287,7 +287,8 @@ input[type="text"], input[type="email"] {
 textarea {
     min-height: 100px;
     min-width: 300px;
-    padding: 5x;
+    padding: 25x;
+    margin-top: 15px;
     border: 1px solid #999;
 }
 
