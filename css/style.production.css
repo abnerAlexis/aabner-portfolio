@@ -30,8 +30,7 @@ body {
 .profile,
 .welcome,
 .about,
-.table,
-.form {
+.table{
     max-width: 700px;
     margin: 0 auto;
     text-align: left;
@@ -39,6 +38,7 @@ body {
 
 .logo {
     width: 200px;
+    padding-top: 20px;
 }
 
 .profile-picture {
@@ -57,35 +57,6 @@ footer {
     clear: both;
 }
 
-#submit {
-    background-color: rgb(10, 174, 174);
-    border-radius: 15%;
-    border: none;
-    font-size: 20px;
-    height: 60px;
-    text-align: center;
-    width: 120px;
-    text-decoration: none;
-    display: inline-block;
-    font-family: inherit;
-    font-size: 16px;
-    margin-bottom: 5px;
-    -webkit-transition-duration: 1000ms;
-    -o-transition-duration: 1000ms;
-    transition-duration: 1000ms;
-    -webkit-transition-property: opacity;
-    -o-transition-property: opacity;
-    transition-property: opacity;
-}
-
-submit:hover,
-submit:focus,
-#submit:hover,
-#submit:focus {
-    cursor: pointer;
-    opacity: 0.8;
-}
-
 li {
     display: inline-block;
     margin-right: 20px;
@@ -100,10 +71,6 @@ li {
     color: #090ccf;
     font-size: 20px;
     text-decoration: none;
-}
-
-.linkto {
-    font-size: 20px;
 }
 
 .linkto:focus {
@@ -249,56 +216,134 @@ path {
     -webkit-animation: 4s color-change infinite alternate linear;
 }
 
-fieldset {
-    margin: 0 auto;
-    padding: 10px 20px;
-    border: 1px solid orangered;
-    border-radius: 5%;
-    text-align: center;
-    max-width: 500px;
-}
-
-legend {
-    font-size: 20px;
-    padding: 25px;
-    color: #999;
-    text-align: left;
-}
-
-label {
-    display: inline-flex;
-    margin-top: 12px;
-}
-
-label:first-of-type {
-    margin-top: -25px;
-}
-
-input {
-    padding: 8px;
-    border-radius: 6%;
-}
-
-input[type="text"], input[type="email"] {
-    width: 300px;
-    border: 1px solid #999;
-}
-
-textarea {
-    min-height: 100px;
-    min-width: 300px;
-    padding: 25x;
-    margin-top: 15px;
-    border: 1px solid #999;
-}
-
-.contact {
-    margin-top: -10px;
-    text-align: center;
-}
-
 .resume-link {
     margin-top: 55px;
     margin-bottom: 0;
     text-align: center;
 }
+
+.section-contact {
+    min-height: 100vh;
+    padding: 10px 0;
+    background-image: linear-gradient(175deg, #faf9f8 50%, orange 50%, orangered);
+  }
+  
+  .section-contact .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .section-contact .container {
+      padding: 0 64px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section-contact .container {
+      padding: 0 128px;
+    }
+  }
+  
+  .section-contact .container h1 {
+    color: orangered;
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .section-contact .container p {
+    color: #888;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+  
+  .section-contact .container form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    background-color: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (min-width: 768px) {
+    .section-contact .container form {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .section-contact .container form .form-group.full {
+    /* Starting from the first element to
+    all the way to the end. This will stretch
+    the odd element stretch accros the area.*/
+    grid-column: 1/-1;
+  }
+  
+  .section-contact .container form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #888;
+    font-size: 14px;
+  }
+  
+  .section-contact .container form .form-group .form-element {
+    /* Next three line resets the form elements */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    display: block;
+    width: 100%;
+    /* form elements paddings may get stretchy
+    even can overlay the container (next three lines) */
+    border-radius: 8px;
+    padding: 12px 16px;
+    background-color: #f1ede8;
+  }
+  
+  .section-contact .container form .form-group .form-element:focus {
+    /* When clicked input boxes will be white and get box shadow */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    transition: 0.4s;
+  }
+  
+  .section-contact .container form .form-group textarea {
+    /* this will prevent the strechyness */
+    resize: none;
+    min-height: 100px;
+  }
+  
+  .section-contact .container form .submit-group {
+    /* button will span to the end */
+    grid-column: 1/-1;
+    /* This supposed to take submit button to the right but
+    it's not happening */
+    text-align: right;
+  }
+  
+  .section-contact .container form .submit-group input[type=submit] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 12px 16px;
+    background-color: #f08603;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .section-contact .container form .submit-group input[type=submit]:hover {
+    background-color: #f93c02;
+  }
