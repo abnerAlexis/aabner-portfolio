@@ -11,6 +11,7 @@
 }
 
 body {
+    display: inline;
     background-color: #fff;
     font-family: "Martian Mono", Verdana, Tahoma, sans-serif;
     font-weight: 500;
@@ -34,6 +35,7 @@ body {
     max-width: 700px;
     margin: 0 auto;
     text-align: left;
+    margin-top: 100px;
 }
 
 .logo {
@@ -48,12 +50,32 @@ body {
     border-radius: 50%;
 }
 
+.welcome-p {
+    margin-top: 100px;
+    padding-top: 40px;
+}
+
+.welcome-h {
+    padding-top: 50px;
+}
+
+.slc-svg {
+    margin: 0 auto;
+    width: 600px;
+    padding: 0;
+}
+
 footer {
     font-size: 18px;
     text-align: center;
     margin: 0 auto;
     /* will clear all floats, both right and left. */
     clear: both;
+    margin-top: 100px;
+}
+
+.social {
+    margin: 0 auto;
 }
 
 li {
@@ -221,6 +243,7 @@ button:focus,
 
 path {
     -webkit-animation: 4s color-change infinite alternate linear;
+    animation: 4s color-change infinite alternate linear; /* Standard property */
 }
 
 .resume-link {
