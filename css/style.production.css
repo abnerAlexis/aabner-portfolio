@@ -115,22 +115,30 @@ h2 {
 }
 
 .grid-container {
-    display: -ms-grid;
+    /* display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     background-color: black;
     color: azure;
-    padding: 10px;
+    padding: 10px; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust minimum and maximum column widths as needed */
+    gap: 20px; /* Adjust the gap between grid items as needed */
+    margin: 20px;
 }
 
 .grid-item {
-    background-color: darkred;
-    border: 2px solid rgb(251, 153, 153);
+    background: linear-gradient(rgba(193, 215, 233, 0.914), rgba(251, 210, 210, 0) 45%, rgba(251, 210, 210, 0.5));
     padding: 30px;
     font-size: 28px;
     text-align: center;
+}
+
+.projectdesc {
+    font-size: 16px;
 }
 
 @media all and (max-width: 700px) {
@@ -138,11 +146,11 @@ h2 {
         font-size: 20px;
     }
 
-    .grid-container {
+    /* .grid-container {
         -ms-grid-columns: 1fr 20px 1fr;
         grid-template-columns: 1fr 1fr;
         padding: 5px;
-    }
+    } */
 
     .grid-item {
         padding: 10px;
