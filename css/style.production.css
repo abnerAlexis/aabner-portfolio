@@ -43,21 +43,11 @@ body {
     padding-top: 20px;
 }
 
-.profile-picture {
+/* .profile-picture {
     float: left;
-    width: 250px;
-    margin-right: 40px;
+    margin-right: 100px;
     border-radius: 50%;
-}
-
-.welcome-p {
-    margin-top: 100px;
-    padding-top: 40px;
-}
-
-.welcome-h {
-    padding-top: 50px;
-}
+} */
 
 .slc-svg {
     margin: 0 auto;
@@ -71,7 +61,7 @@ footer {
     margin: 0 auto;
     /* will clear all floats, both right and left. */
     clear: both;
-    margin-top: 100px;
+    margin-top: 0px;
 }
 
 .social {
@@ -147,7 +137,7 @@ h2 {
     padding: 10px; */
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust minimum and maximum column widths as needed */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Adjust minimum and maximum column widths as needed */
     gap: 20px; /* Adjust the gap between grid items as needed */
     margin: 20px;
 }
@@ -384,7 +374,6 @@ path {
     font-size: 0.8em;
 }
 
-.casestudy {
-    text-decoration: none;
-    color: #faf9f8;
+.page-header_item {
+    width: 220px;
 }

@@ -1,0 +1,41 @@
+/* Welcome Section Styling */
+.welcome {
+    text-align: left;
+    padding: 20px;
+}
+
+.welcome-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    border-radius: 40%;
+    margin-right: 100px; 
+    width: 200px; 
+    height: 200px; 
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-h {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.welcome-t {
+    margin: 0;
+    font-size: 1em;
+}
+
+.welcome-p {
+    margin: 20px 0;
+}
