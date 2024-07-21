@@ -23,7 +23,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding: 20px;
+    padding-bottom: 10px;
     margin: 0 auto;
     border-bottom: 1px solid #000;
 }
@@ -36,11 +36,6 @@ body {
     margin: 0 auto;
     text-align: left;
     margin-top: 100px;
-}
-
-.logo {
-    width: 200px;
-    padding-top: 20px;
 }
 
 /* .profile-picture {
@@ -75,12 +70,13 @@ li {
 
 .navigation-list {
     list-style-type: none;
+    margin-bottom: 0;
 }
 
 .navigation-list__item,
 .linkto {
     color: #090ccf;
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
 }
 
@@ -116,7 +112,7 @@ td {
 }
 
 h1 {
-    color: orangered;
+    color: #ff4500;
     font-size: 30px;
     text-align: center;
 }
@@ -376,4 +372,9 @@ path {
 
 .page-header_item {
     width: 220px;
+}
+
+.casestudy {
+    text-decoration: none;
+    color: white;
 }
