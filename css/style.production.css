@@ -13,7 +13,7 @@
 body {
     display: inline;
     background-color: #fff;
-    font-family: "Martian Mono", Verdana, Tahoma, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     line-height: 2.5;
 }
@@ -66,6 +66,12 @@ footer {
 li {
     display: inline-block;
     margin-right: 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navigation-list {
