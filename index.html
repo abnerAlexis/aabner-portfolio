@@ -25,6 +25,11 @@
         <header class="page-header">
             <div class="navbar">
                 <a href="index.html"><img src="./img/alexislogo.png" alt="logo" class="page-header_item" /></a>
+                <button class="hamburger-menu" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
                 <nav class="main-navigation page-header__item">
                     <ul role="menubar" class="navigation-list">
                         <li role="presentation">
@@ -53,18 +58,15 @@
                 <h5 class="welcome-t">Full-Stack Developer</h5>
             </div>
         </div>
-        <p class="welcome-p">
-            I’m a versatile professional with a background in business administration, tax auditing, and education. My
-            experience as a tax officer at the Ministry of Finance sharpened my analytical thinking and attention to
-            detail. Additionally, my roles as a math and computer science tutor enhanced my leadership and communication
-            skills.
-        </p>
-        <p>
-            Recently, I transitioned into full-stack web development, specializing in React.js, Node.js, and MongoDB.
-            I'm passionate about creating modern web applications. Explore my <a
-                href="https://abneralexis.github.io/aabner-portfolio/work.html"> projects</a> and connect with me to
-            learn more.
-        </p>
+        <h1>Welcome to My Portfolio</h1>
+            <p>Hello! I'm Alexis Abner, a passionate web developer dedicated to creating beautiful and functional websites. Explore my portfolio to see some of the projects I've worked on.</p>
+        
+            <p>With a background in web development, I specialize in building responsive and user-friendly websites. I have experience with various technologies including HTML, CSS, JavaScript, React.js, Node.js, and more.</p>
+        
+            <p>Check out some of the projects I've worked on in the past. Each project showcases my skills and dedication to creating high-quality web applications.</p>
+        
+         
+            <p>If you'd like to get in touch with me, feel free to reach out through the contact form or connect with me on social media.</p>
     </div>
 
     <footer>
@@ -86,6 +88,16 @@
         </div>
     </footer>
     <script src="js/tota11y.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const mainNavigation = document.querySelector('.main-navigation');
+
+            hamburgerMenu.addEventListener('click', function () {
+                mainNavigation.classList.toggle('show');
+            });
+        });
+    </script>
 </body>
 
 </html>

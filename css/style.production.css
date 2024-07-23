@@ -32,10 +32,10 @@ body {
 .welcome,
 .about,
 .table {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     text-align: left;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 /* .profile-picture {
@@ -72,6 +72,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .navigation-list {
@@ -243,6 +244,7 @@ path {
     margin-top: 55px;
     margin-bottom: 0;
     text-align: center;
+    padding: 0;
 }
 
 .section-contact {
@@ -383,4 +385,73 @@ path {
 .casestudy {
     text-decoration: none;
     color: white;
+}
+/*==================================================================== */
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .page-header_item {
+        flex-grow: 1;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .main-navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+    }
+
+    .main-navigation.show {
+        display: flex;
+    }
+
+    .navigation-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navigation-list__item {
+        padding: 10px 20px;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+    }
+
+    .navigation-list__item:last-child {
+        border-bottom: none;
+    }
 }
