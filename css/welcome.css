@@ -14,10 +14,11 @@
 }
 
 .profile-picture {
-    border-radius: 40%;
-    margin-right: 100px; 
-    width: 200px; 
-    height: 200px; 
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 150px; 
+    width: 220px; 
+    height: 275px; 
 }
 
 .welcome-text {
@@ -39,4 +40,37 @@
 
 .welcome-p {
     margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .profile-picture {
+        width: 200px;
+        height: 250px;
+        margin-right: 20px; /* Reduced margin for smaller screens */
+    }
+
+    .welcome-h {
+        font-size: 1.3em;
+    }
+
+    .welcome-t {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-picture {
+        width: 140px;
+        height: 175px;
+        margin-right: 0;
+        margin-bottom: 20px; /* Adds space between the image and text */
+    }
+
+    .welcome-h {
+        font-size: 1.1em;
+    }
+
+    .welcome-t {
+        font-size: 0.8em;
+    }
 }
